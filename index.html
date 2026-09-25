@@ -1,52 +1,369 @@
 <!doctype html>
-<html lang="vi-en">
+<html lang="vi">
   <head>
     <meta charset="UTF-8" />
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <title>💅 NailBox Lena in Taiwan</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
 
     <link rel="stylesheet" href="style.css" />
   </head>
 
   <body>
-    <!-- =========================
-         HEADER
-    ========================= -->
-
+    <!-- HEADER -->
     <header>
       <h1>💅 NailBox Lena in Taiwan</h1>
 
-      <p>Mẫu nailbox có sẵn tại cửa hàng</p>
+      <p>
+        Mẫu nailbox có sẵn tại cửa hàng<br />
+        Nailbox handmade tại Đài Bắc & Tân Bắc<br />
+        Free ship khu vực 新店<br />
+        Ship 7-eleven toàn quốc
+      </p>
     </header>
 
-    <!-- =========================
-         DANH SÁCH SẢN PHẨM
-    ========================= -->
-
+    <!-- PRODUCT LIST -->
     <main class="container">
-      <div class="products" id="productList"></div>
+      <div class="products">
+        <!-- A01 -->
+        <div
+          class="product-card"
+          onclick="
+            openProduct(
+              'IMAGE/1ST_20261001/AVAILABLE/US-UK/a01.jpg',
+              'A01',
+              '🎀 Phong cách nữ tính',
+              'Size M',
+              'NT$ 199',
+            )
+          "
+        >
+          <img src="IMAGE/1ST_20261001/AVAILABLE/US-UK/a01.jpg" alt="A01" />
+
+          <div class="product-info">
+            <h3>A01</h3>
+
+            <p class="style">🎀 Phong cách nữ tính</p>
+
+            <p class="price">NT$ 199</p>
+
+            <p class="size">📏 Size M</p>
+          </div>
+        </div>
+
+        <!-- A02 -->
+        <div
+          class="product-card"
+          onclick="
+            openProduct(
+              'IMAGE/1ST_20261001/AVAILABLE/US-UK/a02.jpg',
+              'A02',
+              '🌸 Phong cách Hàn Quốc',
+              'Size S / M / L',
+              'NT$ 229',
+            )
+          "
+        >
+          <img src="IMAGE/1ST_20261001/AVAILABLE/US-UK/a02.jpg" alt="A02" />
+
+          <div class="product-info">
+            <h3>A02</h3>
+
+            <p class="style">🌸 Phong cách Hàn Quốc</p>
+
+            <p class="price">NT$ 229</p>
+
+            <p class="size">📏 Size S / M / L</p>
+          </div>
+        </div>
+
+        <!-- A03 -->
+        <div
+          class="product-card"
+          onclick="
+            openProduct(
+              'images/nail3.jpg',
+              'A03',
+              '✨ Phong cách Y2K',
+              'Size M',
+              'NT$ 249',
+            )
+          "
+        >
+          <img src="images/nail3.jpg" alt="A03" />
+
+          <div class="product-info">
+            <h3>A03</h3>
+
+            <p class="style">✨ Phong cách Y2K</p>
+
+            <p class="price">NT$ 249</p>
+
+            <p class="size">📏 Size M</p>
+          </div>
+        </div>
+
+        <!-- A04 -->
+        <div
+          class="product-card"
+          onclick="
+            openProduct(
+              'images/nail4.jpg',
+              'A04',
+              '🍒 Phong cách dễ thương',
+              'Size M',
+              'NT$ 219',
+            )
+          "
+        >
+          <img src="images/nail4.jpg" alt="A04" />
+
+          <div class="product-info">
+            <h3>A04</h3>
+
+            <p class="style">🍒 Phong cách dễ thương</p>
+
+            <p class="price">NT$ 219</p>
+
+            <p class="size">📏 Size M</p>
+          </div>
+        </div>
+
+        <!-- B01 -->
+        <div
+          class="product-card"
+          onclick="
+            openProduct(
+              'images/nail5.jpg',
+              'B01',
+              '🤍 Phong cách tối giản',
+              'Size S / M',
+              'NT$ 199',
+            )
+          "
+        >
+          <img src="images/nail5.jpg" alt="B01" />
+
+          <div class="product-info">
+            <h3>B01</h3>
+
+            <p class="style">🤍 Phong cách tối giản</p>
+
+            <p class="price">NT$ 199</p>
+
+            <p class="size">📏 Size S / M</p>
+          </div>
+        </div>
+
+        <!-- B02 -->
+        <div
+          class="product-card"
+          onclick="
+            openProduct(
+              'images/nail6.jpg',
+              'B02',
+              '🖤 Phong cách cá tính',
+              'Size M',
+              'NT$ 239',
+            )
+          "
+        >
+          <img src="images/nail6.jpg" alt="B02" />
+
+          <div class="product-info">
+            <h3>B02</h3>
+
+            <p class="style">🖤 Phong cách cá tính</p>
+
+            <p class="price">NT$ 239</p>
+
+            <p class="size">📏 Size M</p>
+          </div>
+        </div>
+
+        <!-- B03 -->
+        <div
+          class="product-card"
+          onclick="
+            openProduct(
+              'images/nail7.jpg',
+              'B03',
+              '💙 Phong cách xanh',
+              'Size M / L',
+              'NT$ 229',
+            )
+          "
+        >
+          <img src="images/nail7.jpg" alt="B03" />
+
+          <div class="product-info">
+            <h3>B03</h3>
+
+            <p class="style">💙 Phong cách xanh</p>
+
+            <p class="price">NT$ 229</p>
+
+            <p class="size">📏 Size M / L</p>
+          </div>
+        </div>
+
+        <!-- B04 -->
+        <div
+          class="product-card"
+          onclick="
+            openProduct(
+              'images/nail8.jpg',
+              'B04',
+              '👑 Phong cách tiểu thư',
+              'Size S / M / L',
+              'NT$ 259',
+            )
+          "
+        >
+          <img src="images/nail8.jpg" alt="B04" />
+
+          <div class="product-info">
+            <h3>B04</h3>
+
+            <p class="style">👑 Phong cách tiểu thư</p>
+
+            <p class="price">NT$ 259</p>
+
+            <p class="size">📏 Size S / M / L</p>
+          </div>
+        </div>
+
+        <!-- B05 -->
+        <div
+          class="product-card"
+          onclick="
+            openProduct(
+              'images/nail1.jpg',
+              'B05',
+              '🎀 Phong cách nữ tính',
+              'Size M',
+              'NT$ 199',
+            )
+          "
+        >
+          <img src="images/nail1.jpg" alt="B05" />
+
+          <div class="product-info">
+            <h3>B05</h3>
+
+            <p class="style">🎀 Phong cách nữ tính</p>
+
+            <p class="price">NT$ 199</p>
+
+            <p class="size">📏 Size M</p>
+          </div>
+        </div>
+
+        <!-- A05 -->
+        <div
+          class="product-card"
+          onclick="
+            openProduct(
+              'images/nail1.jpg',
+              'A05',
+              '🎀 Phong cách nữ tính',
+              'Size M',
+              'NT$ 199',
+            )
+          "
+        >
+          <img src="images/nail1.jpg" alt="A05" />
+
+          <div class="product-info">
+            <h3>A05</h3>
+
+            <p class="style">🎀 Phong cách nữ tính</p>
+
+            <p class="price">NT$ 199</p>
+
+            <p class="size">📏 Size M</p>
+          </div>
+        </div>
+
+        <!-- Pink Ribbon -->
+        <div
+          class="product-card"
+          onclick="
+            openProduct(
+              'images/nail1.jpg',
+              'Pink Ribbon',
+              '🎀 Phong cách nữ tính',
+              'Size S / M / L',
+              'NT$ 199',
+            )
+          "
+        >
+          <img src="images/nail1.jpg" alt="Pink Ribbon" />
+
+          <div class="product-info">
+            <h3>Pink Ribbon</h3>
+
+            <p class="style">🎀 Phong cách nữ tính</p>
+
+            <p class="price">NT$ 199</p>
+
+            <p class="size">📏 Size S / M / L</p>
+          </div>
+        </div>
+
+        <!-- A06 -->
+        <div
+          class="product-card"
+          onclick="
+            openProduct(
+              'images/nail1.jpg',
+              'A06',
+              '🌸 Phong cách Hàn Quốc',
+              'Size M',
+              'NT$ 219',
+            )
+          "
+        >
+          <img src="images/nail1.jpg" alt="A06" />
+
+          <div class="product-info">
+            <h3>A06</h3>
+
+            <p class="style">🌸 Phong cách Hàn Quốc</p>
+
+            <p class="price">NT$ 219</p>
+
+            <p class="size">📏 Size M</p>
+          </div>
+        </div>
+
+        <!-- A07 -->
+
+        <!-- Thêm mẫu tiếp theo phía trên hàng này -->
+
+        <!-- -->
+      </div>
     </main>
 
-    <!-- =========================
-         POPUP CHI TIẾT
-    ========================= -->
-
+    <!-- POPUP -->
     <div class="modal" id="modal">
       <div class="detail-box">
-        <!-- NÚT ĐÓNG -->
-
         <span class="close" onclick="closeProduct()"> × </span>
 
-        <!-- ẢNH BÊN TRÁI -->
-
+        <!-- ẢNH LỚN BÊN TRÁI -->
         <div class="image-area">
-          <img id="detailImage" class="detail-image" src="" />
+          <img id="detailImage" class="detail-image" src="" alt="Nailbox" />
         </div>
 
         <!-- THÔNG TIN BÊN PHẢI -->
-
         <div class="detail-info">
           <h2 id="detailName"></h2>
 
@@ -54,15 +371,14 @@
 
           <p id="detailPrice" class="detail-price"></p>
 
+          <p id="detailSize" class="detail-size"></p>
+
           <p class="stock">🟢 Còn hàng</p>
 
           <p class="description">
             💅 Nailbox handmade<br />
-
-            📏 Có thể chọn size phù hợp<br />
-
+            💕 Free ship khu vực 新店<br />
             📦 Nhận gửi hàng toàn Đài Loan<br />
-
             ✨ Mẫu có sẵn tại shop
           </p>
 
@@ -73,163 +389,28 @@
       </div>
     </div>
 
-    <!-- =========================
-         JAVASCRIPT
-    ========================= -->
-
     <script>
-      /* =================================
-           DANH SÁCH SẢN PHẨM
-           
-           MUỐN THÊM MẪU → THÊM 1 ĐOẠN {}
-        ================================= */
+      function openProduct(image, name, style, size, price) {
+        document.getElementById("detailImage").src = image;
 
-      const products = [
-        {
-          name: "A01",
-          style: "🎀 Phong cách nữ tính",
-          price: "NT$ 199",
-          image: "images/nail1.jpg",
-        },
+        document.getElementById("detailImage").alt = name;
 
-        {
-          name: "A02",
-          style: "🌸 Phong cách Hàn Quốc",
-          price: "NT$ 229",
-          image: "images/nail2.jpg",
-        },
+        document.getElementById("detailName").textContent = name;
 
-        {
-          name: "A03",
-          style: "✨ Phong cách Y2K",
-          price: "NT$ 249",
-          image: "images/nail3.jpg",
-        },
+        document.getElementById("detailStyle").textContent = style;
 
-        {
-          name: "A04",
-          style: "🍒 Phong cách dễ thương",
-          price: "NT$ 219",
-          image: "images/nail4.jpg",
-        },
+        document.getElementById("detailPrice").textContent = price;
 
-        {
-          name: "B01",
-          style: "🤍 Phong cách tối giản",
-          price: "NT$ 199",
-          image: "images/nail5.jpg",
-        },
-
-        {
-          name: "B02",
-          style: "🖤 Phong cách cá tính",
-          price: "NT$ 239",
-          image: "images/nail6.jpg",
-        },
-
-        {
-          name: "B03",
-          style: "💙 Phong cách xanh",
-          price: "NT$ 229",
-          image: "images/nail7.jpg",
-        },
-
-        {
-          name: "B04",
-          style: "👑 Phong cách tiểu thư",
-          price: "NT$ 259",
-          image: "images/nail8.jpg",
-        },
-        {
-          name: "B05",
-          style: "🎀 Phong cách nữ tính",
-          price: "NT$ 199",
-          image: "images/nail1.jpg",
-        },
-        {
-          name: "A05",
-          style: "🎀 Phong cách nữ tính",
-          price: "NT$ 199",
-          image: "images/nail1.jpg",
-        },
-        {
-          name: "Pink Ribbon",
-          style: "🎀 Phong cách nữ tính",
-          price: "NT$ 199",
-          image: "images/nail1.jpg",
-        },
-      ];
-
-      /* =================================
-           TỰ ĐỘNG TẠO CARD
-        ================================= */
-
-      const productList = document.getElementById("productList");
-
-      products.forEach(function (product, index) {
-        const card = document.createElement("div");
-
-        card.className = "product";
-
-        card.onclick = function () {
-          openProduct(index);
-        };
-
-        card.innerHTML = `
-
-                <img
-                    src="${product.image}"
-                    alt="${product.name}"
-                >
-
-                <div class="product-info">
-
-                    <h2>
-                        ${product.name}
-                    </h2>
-
-                    <p class="style">
-                        ${product.style}
-                    </p>
-
-                    <p class="price">
-                        ${product.price}
-                    </p>
-
-                </div>
-
-            `;
-
-        productList.appendChild(card);
-      });
-
-      /* =================================
-           MỞ CHI TIẾT SẢN PHẨM
-        ================================= */
-
-      function openProduct(index) {
-        const product = products[index];
-
-        document.getElementById("detailImage").src = product.image;
-
-        document.getElementById("detailName").textContent = product.name;
-
-        document.getElementById("detailStyle").textContent = product.style;
-
-        document.getElementById("detailPrice").textContent = product.price;
+        document.getElementById("detailSize").textContent = size
+          ? "📏 " + size
+          : "";
 
         document.getElementById("modal").style.display = "flex";
       }
 
-      /* =================================
-           ĐÓNG POPUP
-        ================================= */
-
       function closeProduct() {
         document.getElementById("modal").style.display = "none";
       }
-
-      /* CLICK RA NGOÀI KHUNG → ĐÓNG */
 
       document.getElementById("modal").onclick = function (event) {
         if (event.target === this) {
@@ -237,12 +418,10 @@
         }
       };
 
-      /* =================================
-           ĐẶT HÀNG
-        ================================= */
-
       function orderProduct() {
-        alert("Cảm ơn bạn 💕 Vui lòng liên hệ shop để đặt hàng!");
+        alert(
+          "Cảm ơn bạn 💕 Vui lòng gửi ảnh/mã sản phẩm cho shop để đặt hàng!",
+        );
       }
     </script>
   </body>

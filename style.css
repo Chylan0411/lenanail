@@ -5,10 +5,8 @@
 }
 
 body {
-  font-family: Arial, sans-serif;
-
-  background: #fff7fa;
-
+  font-family: "Montserrat", sans-serif;
+  background: #fff8fb;
   color: #333;
 }
 
@@ -18,38 +16,34 @@ body {
 
 header {
   text-align: center;
-
-  padding: 40px 20px;
-
-  background: #ffdce8;
+  padding: 50px 20px 35px;
 }
 
 header h1 {
-  color: #d94f7d;
-
-  font-size: 32px;
-
-  margin-bottom: 10px;
+  font-family: "Playfair Display", serif;
+  font-size: 42px;
+  margin-bottom: 15px;
+  color: #222;
 }
 
 header p {
-  color: #666;
+  font-size: 16px;
+  line-height: 1.8;
+  color: #777;
 }
 
 /* =========================
-   KHU VỰC SẢN PHẨM
+   CONTAINER
 ========================= */
 
 .container {
+  width: 92%;
   max-width: 1400px;
-
-  margin: 40px auto;
-
-  padding: 0 30px;
+  margin: 0 auto;
 }
 
 /* =========================
-   4 MẪU / 1 HÀNG
+   PRODUCTS
 ========================= */
 
 .products {
@@ -58,33 +52,40 @@ header p {
   grid-template-columns: repeat(4, 1fr);
 
   gap: 25px;
+
+  padding-bottom: 60px;
 }
 
 /* =========================
-   CARD SẢN PHẨM
+   PRODUCT CARD
 ========================= */
 
-.product {
+.product-card {
   background: white;
 
-  border-radius: 18px;
+  border-radius: 15px;
 
   overflow: hidden;
 
-  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
-
   cursor: pointer;
 
-  transition: 0.3s;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
 }
 
-.product:hover {
-  transform: translateY(-5px);
+.product-card:hover {
+  transform: translateY(-6px);
 
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
 }
 
-.product img {
+/* =========================
+   PRODUCT IMAGE
+   TỶ LỆ 1:1
+========================= */
+
+.product-card > img {
   width: 100%;
 
   aspect-ratio: 1 / 1;
@@ -94,34 +95,54 @@ header p {
   display: block;
 }
 
+/* =========================
+   PRODUCT INFO
+========================= */
+
 .product-info {
-  padding: 15px;
+  padding: 15px 17px 20px;
 }
 
-.product-info h2 {
-  font-size: 18px;
+.product-info h3 {
+  font-family: "Playfair Display", serif;
+
+  font-size: 21px;
+
+  font-weight: 600;
+
+  margin-bottom: 8px;
+
+  color: #222;
+}
+
+.product-info .style {
+  font-size: 13px;
+
+  color: #777;
+
+  margin-bottom: 8px;
+
+  line-height: 1.5;
+}
+
+.product-info .price {
+  font-size: 15px;
+
+  font-weight: 600;
+
+  color: #222;
 
   margin-bottom: 7px;
 }
 
-.style {
+.product-info .size {
+  font-size: 12px;
+
   color: #888;
-
-  font-size: 14px;
-
-  margin-bottom: 10px;
-}
-
-.price {
-  color: #d94f7d;
-
-  font-size: 19px;
-
-  font-weight: bold;
 }
 
 /* =========================
-   POPUP
+   MODAL
 ========================= */
 
 .modal {
@@ -129,11 +150,17 @@ header p {
 
   position: fixed;
 
-  inset: 0;
+  z-index: 9999;
 
-  background: rgba(0, 0, 0, 0.75);
+  left: 0;
 
-  z-index: 1000;
+  top: 0;
+
+  width: 100%;
+
+  height: 100%;
+
+  background: rgba(0, 0, 0, 0.55);
 
   justify-content: center;
 
@@ -143,34 +170,72 @@ header p {
 }
 
 /* =========================
-   KHUNG CHI TIẾT
+   DETAIL BOX
 ========================= */
 
 .detail-box {
   position: relative;
 
-  width: 900px;
+  width: 90%;
 
-  max-width: 100%;
+  max-width: 1100px;
+
+  max-height: 90vh;
+
+  overflow: auto;
 
   background: white;
 
-  border-radius: 20px;
+  border-radius: 18px;
 
-  padding: 30px;
+  padding: 35px;
 
   display: grid;
 
   grid-template-columns: 1fr 1fr;
 
-  gap: 40px;
+  gap: 45px;
+
+  align-items: center;
 }
 
 /* =========================
-   ẢNH LỚN
+   CLOSE
+========================= */
+
+.close {
+  position: absolute;
+
+  top: 12px;
+
+  right: 20px;
+
+  font-size: 34px;
+
+  line-height: 1;
+
+  color: #555;
+
+  cursor: pointer;
+
+  z-index: 10;
+
+  transition: 0.2s;
+}
+
+.close:hover {
+  color: #000;
+
+  transform: scale(1.1);
+}
+
+/* =========================
+   DETAIL IMAGE
 ========================= */
 
 .image-area {
+  width: 100%;
+
   display: flex;
 
   justify-content: center;
@@ -181,109 +246,109 @@ header p {
 .detail-image {
   width: 100%;
 
+  max-width: 500px;
+
   height: 550px;
 
   object-fit: contain;
 
-  border-radius: 15px;
+  display: block;
+
+  border-radius: 10px;
 }
 
 /* =========================
-   THÔNG TIN
+   DETAIL INFO
 ========================= */
 
 .detail-info {
-  display: flex;
-
-  flex-direction: column;
-
-  justify-content: center;
+  padding: 20px;
 }
 
 .detail-info h2 {
-  font-size: 32px;
+  font-family: "Playfair Display", serif;
 
-  color: #d94f7d;
+  font-size: 38px;
+
+  font-weight: 600;
+
+  margin-bottom: 15px;
+
+  color: #222;
+}
+
+.detail-style {
+  font-size: 15px;
+
+  color: #777;
 
   margin-bottom: 15px;
 }
 
-.detail-style {
-  font-size: 18px;
+.detail-price {
+  font-size: 24px;
+
+  font-weight: 700;
+
+  color: #222;
+
+  margin-bottom: 12px;
+}
+
+.detail-size {
+  font-size: 14px;
 
   color: #777;
 
-  margin-bottom: 25px;
+  margin-bottom: 15px;
 }
 
-.detail-price {
-  font-size: 28px;
+.stock {
+  font-size: 14px;
 
-  font-weight: bold;
-
-  color: #d94f7d;
+  color: #388e3c;
 
   margin-bottom: 20px;
 }
 
-.stock {
-  color: #42a85f;
+.description {
+  font-size: 14px;
+
+  line-height: 2;
+
+  color: #666;
 
   margin-bottom: 25px;
 }
 
-.description {
-  line-height: 1.8;
-
-  color: #555;
-
-  margin-bottom: 30px;
-}
-
 /* =========================
-   NÚT ĐẶT HÀNG
+   ORDER BUTTON
 ========================= */
 
 .order-button {
   border: none;
 
-  background: #d94f7d;
+  background: #222;
 
   color: white;
 
-  padding: 15px;
+  padding: 14px 28px;
 
-  border-radius: 12px;
+  border-radius: 30px;
 
-  font-size: 17px;
+  font-family: "Montserrat", sans-serif;
+
+  font-size: 14px;
 
   cursor: pointer;
+
+  transition: 0.3s;
 }
 
 .order-button:hover {
-  background: #c83f6d;
-}
+  background: #555;
 
-/* =========================
-   NÚT ĐÓNG
-========================= */
-
-.close {
-  position: absolute;
-
-  right: 20px;
-
-  top: 10px;
-
-  font-size: 35px;
-
-  color: #777;
-
-  cursor: pointer;
-}
-
-.close:hover {
-  color: #d94f7d;
+  transform: translateY(-2px);
 }
 
 /* =========================
@@ -293,49 +358,111 @@ header p {
 @media (max-width: 1000px) {
   .products {
     grid-template-columns: repeat(3, 1fr);
+
+    gap: 20px;
   }
 }
 
 /* =========================
-   ĐIỆN THOẠI
+   MOBILE
 ========================= */
 
 @media (max-width: 700px) {
+  header {
+    padding: 35px 15px 25px;
+  }
+
+  header h1 {
+    font-size: 32px;
+  }
+
+  header p {
+    font-size: 13px;
+  }
+
+  .container {
+    width: 94%;
+  }
+
   .products {
     grid-template-columns: repeat(2, 1fr);
 
     gap: 15px;
   }
 
-  .container {
-    padding: 0 15px;
+  .product-info {
+    padding: 12px 13px 16px;
   }
 
-  .product-info h2 {
-    font-size: 16px;
+  .product-info h3 {
+    font-size: 18px;
   }
+
+  .product-info .style {
+    font-size: 12px;
+  }
+
+  .product-info .price {
+    font-size: 14px;
+  }
+
+  .product-info .size {
+    font-size: 11px;
+  }
+
+  /* POPUP */
 
   .detail-box {
+    width: 94%;
+
+    max-height: 92vh;
+
+    padding: 25px 18px;
+
     grid-template-columns: 1fr;
 
-    gap: 20px;
-
-    max-height: 90vh;
-
-    overflow-y: auto;
+    gap: 10px;
   }
 
   .detail-image {
     height: 350px;
+
+    max-width: 100%;
+  }
+
+  .detail-info {
+    padding: 10px;
+  }
+
+  .detail-info h2 {
+    font-size: 30px;
   }
 }
 
 /* =========================
-   ĐIỆN THOẠI NHỎ
+   SMALL MOBILE
 ========================= */
 
 @media (max-width: 450px) {
   .products {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr 1fr;
+
+    gap: 12px;
+  }
+
+  .product-info h3 {
+    font-size: 17px;
+  }
+
+  .product-info .style {
+    font-size: 11px;
+  }
+
+  .product-info .size {
+    font-size: 11px;
+  }
+
+  .detail-image {
+    height: 300px;
   }
 }
