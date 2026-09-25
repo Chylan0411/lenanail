@@ -2,7 +2,7 @@
           class="product-card"
           onclick="
             openProduct(
-              'IMAGE/1ST_20261001/AVAILABLE/US-UK/a02.jpg',
+              './IMAGE/1ST_20261001/AVAILABLE/US-UK/a02.jpg',
               'A02',
               '🌸 Phong cách Hàn Quốc',
               'Size S / M / L',
@@ -10,7 +10,7 @@
             )
           "
         >
-          <img src="IMAGE/1ST_20261001/AVAILABLE/US-UK/a02.jpg" alt="A02" />
+          <img src="./IMAGE/1ST_20261001/AVAILABLE/US-UK/a02.jpg" alt="A02" />
 
           <div class="product-info">
             <h3>A02</h3>
