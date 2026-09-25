@@ -1,0 +1,249 @@
+<!doctype html>
+<html lang="vi-en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>💅 NailBox Lena in Taiwan</title>
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <!-- =========================
+         HEADER
+    ========================= -->
+
+    <header>
+      <h1>💅 NailBox Lena in Taiwan</h1>
+
+      <p>Mẫu nailbox có sẵn tại cửa hàng</p>
+    </header>
+
+    <!-- =========================
+         DANH SÁCH SẢN PHẨM
+    ========================= -->
+
+    <main class="container">
+      <div class="products" id="productList"></div>
+    </main>
+
+    <!-- =========================
+         POPUP CHI TIẾT
+    ========================= -->
+
+    <div class="modal" id="modal">
+      <div class="detail-box">
+        <!-- NÚT ĐÓNG -->
+
+        <span class="close" onclick="closeProduct()"> × </span>
+
+        <!-- ẢNH BÊN TRÁI -->
+
+        <div class="image-area">
+          <img id="detailImage" class="detail-image" src="" />
+        </div>
+
+        <!-- THÔNG TIN BÊN PHẢI -->
+
+        <div class="detail-info">
+          <h2 id="detailName"></h2>
+
+          <p id="detailStyle" class="detail-style"></p>
+
+          <p id="detailPrice" class="detail-price"></p>
+
+          <p class="stock">🟢 Còn hàng</p>
+
+          <p class="description">
+            💅 Nailbox handmade<br />
+
+            📏 Có thể chọn size phù hợp<br />
+
+            📦 Nhận gửi hàng toàn Đài Loan<br />
+
+            ✨ Mẫu có sẵn tại shop
+          </p>
+
+          <button class="order-button" onclick="orderProduct()">
+            💕 Đặt mẫu này
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- =========================
+         JAVASCRIPT
+    ========================= -->
+
+    <script>
+      /* =================================
+           DANH SÁCH SẢN PHẨM
+           
+           MUỐN THÊM MẪU → THÊM 1 ĐOẠN {}
+        ================================= */
+
+      const products = [
+        {
+          name: "A01",
+          style: "🎀 Phong cách nữ tính",
+          price: "NT$ 199",
+          image: "images/nail1.jpg",
+        },
+
+        {
+          name: "A02",
+          style: "🌸 Phong cách Hàn Quốc",
+          price: "NT$ 229",
+          image: "images/nail2.jpg",
+        },
+
+        {
+          name: "A03",
+          style: "✨ Phong cách Y2K",
+          price: "NT$ 249",
+          image: "images/nail3.jpg",
+        },
+
+        {
+          name: "A04",
+          style: "🍒 Phong cách dễ thương",
+          price: "NT$ 219",
+          image: "images/nail4.jpg",
+        },
+
+        {
+          name: "B01",
+          style: "🤍 Phong cách tối giản",
+          price: "NT$ 199",
+          image: "images/nail5.jpg",
+        },
+
+        {
+          name: "B02",
+          style: "🖤 Phong cách cá tính",
+          price: "NT$ 239",
+          image: "images/nail6.jpg",
+        },
+
+        {
+          name: "B03",
+          style: "💙 Phong cách xanh",
+          price: "NT$ 229",
+          image: "images/nail7.jpg",
+        },
+
+        {
+          name: "B04",
+          style: "👑 Phong cách tiểu thư",
+          price: "NT$ 259",
+          image: "images/nail8.jpg",
+        },
+        {
+          name: "B05",
+          style: "🎀 Phong cách nữ tính",
+          price: "NT$ 199",
+          image: "images/nail1.jpg",
+        },
+        {
+          name: "A05",
+          style: "🎀 Phong cách nữ tính",
+          price: "NT$ 199",
+          image: "images/nail1.jpg",
+        },
+        {
+          name: "Pink Ribbon",
+          style: "🎀 Phong cách nữ tính",
+          price: "NT$ 199",
+          image: "images/nail1.jpg",
+        },
+      ];
+
+      /* =================================
+           TỰ ĐỘNG TẠO CARD
+        ================================= */
+
+      const productList = document.getElementById("productList");
+
+      products.forEach(function (product, index) {
+        const card = document.createElement("div");
+
+        card.className = "product";
+
+        card.onclick = function () {
+          openProduct(index);
+        };
+
+        card.innerHTML = `
+
+                <img
+                    src="${product.image}"
+                    alt="${product.name}"
+                >
+
+                <div class="product-info">
+
+                    <h2>
+                        ${product.name}
+                    </h2>
+
+                    <p class="style">
+                        ${product.style}
+                    </p>
+
+                    <p class="price">
+                        ${product.price}
+                    </p>
+
+                </div>
+
+            `;
+
+        productList.appendChild(card);
+      });
+
+      /* =================================
+           MỞ CHI TIẾT SẢN PHẨM
+        ================================= */
+
+      function openProduct(index) {
+        const product = products[index];
+
+        document.getElementById("detailImage").src = product.image;
+
+        document.getElementById("detailName").textContent = product.name;
+
+        document.getElementById("detailStyle").textContent = product.style;
+
+        document.getElementById("detailPrice").textContent = product.price;
+
+        document.getElementById("modal").style.display = "flex";
+      }
+
+      /* =================================
+           ĐÓNG POPUP
+        ================================= */
+
+      function closeProduct() {
+        document.getElementById("modal").style.display = "none";
+      }
+
+      /* CLICK RA NGOÀI KHUNG → ĐÓNG */
+
+      document.getElementById("modal").onclick = function (event) {
+        if (event.target === this) {
+          closeProduct();
+        }
+      };
+
+      /* =================================
+           ĐẶT HÀNG
+        ================================= */
+
+      function orderProduct() {
+        alert("Cảm ơn bạn 💕 Vui lòng liên hệ shop để đặt hàng!");
+      }
+    </script>
+  </body>
+</html>

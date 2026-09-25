@@ -1,0 +1,341 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+
+  background: #fff7fa;
+
+  color: #333;
+}
+
+/* =========================
+   HEADER
+========================= */
+
+header {
+  text-align: center;
+
+  padding: 40px 20px;
+
+  background: #ffdce8;
+}
+
+header h1 {
+  color: #d94f7d;
+
+  font-size: 32px;
+
+  margin-bottom: 10px;
+}
+
+header p {
+  color: #666;
+}
+
+/* =========================
+   KHU VỰC SẢN PHẨM
+========================= */
+
+.container {
+  max-width: 1400px;
+
+  margin: 40px auto;
+
+  padding: 0 30px;
+}
+
+/* =========================
+   4 MẪU / 1 HÀNG
+========================= */
+
+.products {
+  display: grid;
+
+  grid-template-columns: repeat(4, 1fr);
+
+  gap: 25px;
+}
+
+/* =========================
+   CARD SẢN PHẨM
+========================= */
+
+.product {
+  background: white;
+
+  border-radius: 18px;
+
+  overflow: hidden;
+
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+
+  cursor: pointer;
+
+  transition: 0.3s;
+}
+
+.product:hover {
+  transform: translateY(-5px);
+
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+}
+
+.product img {
+  width: 100%;
+
+  aspect-ratio: 1 / 1;
+
+  object-fit: cover;
+
+  display: block;
+}
+
+.product-info {
+  padding: 15px;
+}
+
+.product-info h2 {
+  font-size: 18px;
+
+  margin-bottom: 7px;
+}
+
+.style {
+  color: #888;
+
+  font-size: 14px;
+
+  margin-bottom: 10px;
+}
+
+.price {
+  color: #d94f7d;
+
+  font-size: 19px;
+
+  font-weight: bold;
+}
+
+/* =========================
+   POPUP
+========================= */
+
+.modal {
+  display: none;
+
+  position: fixed;
+
+  inset: 0;
+
+  background: rgba(0, 0, 0, 0.75);
+
+  z-index: 1000;
+
+  justify-content: center;
+
+  align-items: center;
+
+  padding: 20px;
+}
+
+/* =========================
+   KHUNG CHI TIẾT
+========================= */
+
+.detail-box {
+  position: relative;
+
+  width: 900px;
+
+  max-width: 100%;
+
+  background: white;
+
+  border-radius: 20px;
+
+  padding: 30px;
+
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  gap: 40px;
+}
+
+/* =========================
+   ẢNH LỚN
+========================= */
+
+.image-area {
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+}
+
+.detail-image {
+  width: 100%;
+
+  height: 550px;
+
+  object-fit: contain;
+
+  border-radius: 15px;
+}
+
+/* =========================
+   THÔNG TIN
+========================= */
+
+.detail-info {
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: center;
+}
+
+.detail-info h2 {
+  font-size: 32px;
+
+  color: #d94f7d;
+
+  margin-bottom: 15px;
+}
+
+.detail-style {
+  font-size: 18px;
+
+  color: #777;
+
+  margin-bottom: 25px;
+}
+
+.detail-price {
+  font-size: 28px;
+
+  font-weight: bold;
+
+  color: #d94f7d;
+
+  margin-bottom: 20px;
+}
+
+.stock {
+  color: #42a85f;
+
+  margin-bottom: 25px;
+}
+
+.description {
+  line-height: 1.8;
+
+  color: #555;
+
+  margin-bottom: 30px;
+}
+
+/* =========================
+   NÚT ĐẶT HÀNG
+========================= */
+
+.order-button {
+  border: none;
+
+  background: #d94f7d;
+
+  color: white;
+
+  padding: 15px;
+
+  border-radius: 12px;
+
+  font-size: 17px;
+
+  cursor: pointer;
+}
+
+.order-button:hover {
+  background: #c83f6d;
+}
+
+/* =========================
+   NÚT ĐÓNG
+========================= */
+
+.close {
+  position: absolute;
+
+  right: 20px;
+
+  top: 10px;
+
+  font-size: 35px;
+
+  color: #777;
+
+  cursor: pointer;
+}
+
+.close:hover {
+  color: #d94f7d;
+}
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 1000px) {
+  .products {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* =========================
+   ĐIỆN THOẠI
+========================= */
+
+@media (max-width: 700px) {
+  .products {
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 15px;
+  }
+
+  .container {
+    padding: 0 15px;
+  }
+
+  .product-info h2 {
+    font-size: 16px;
+  }
+
+  .detail-box {
+    grid-template-columns: 1fr;
+
+    gap: 20px;
+
+    max-height: 90vh;
+
+    overflow-y: auto;
+  }
+
+  .detail-image {
+    height: 350px;
+  }
+}
+
+/* =========================
+   ĐIỆN THOẠI NHỎ
+========================= */
+
+@media (max-width: 450px) {
+  .products {
+    grid-template-columns: 1fr;
+  }
+}

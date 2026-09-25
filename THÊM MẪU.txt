@@ -1,0 +1,6 @@
+	{
+          name: "A/B",
+          style: "Giới thiệu",
+          price: "NT$ 199",
+          image: "images/nail1.jpg",
+        },
