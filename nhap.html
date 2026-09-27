@@ -1,0 +1,447 @@
+```html
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>💅 NailBox Lena in Taiwan</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <!-- =========================
+         HEADER
+    ========================== -->
+
+    <header>
+      <h1>💅 NailBox Lena in Taiwan</h1>
+
+      <p>
+        Những mẫu nailbox handmade hot trend có sẵn tại Lena<br />
+        Free ship từ đơn 500元<br />
+        Ship 7-ELEVEN toàn quốc<br /><br />
+
+        Lena 現有流行穿戴甲款式<br />
+        台灣手工穿戴甲<br />
+        滿500元 - 免運<br />
+        7-ELEVEN 全台寄送
+      </p>
+    </header>
+
+    <!-- =========================
+         PRODUCT SECTION
+    ========================== -->
+
+    <main class="container">
+      <!-- CATEGORY BUTTONS -->
+
+      <div class="category-buttons">
+        <button
+          class="category-btn active"
+          onclick="filterProducts('all', this)"
+        >
+          ✨ Tất cả
+        </button>
+
+        <button class="category-btn" onclick="filterProducts('cat-eye', this)">
+          🐱 Mắt mèo
+        </button>
+
+        <button class="category-btn" onclick="filterProducts('y2k', this)">
+          💿 Y2K
+        </button>
+
+        <button class="category-btn" onclick="filterProducts('us-uk', this)">
+          🇺🇸 US-UK
+        </button>
+
+        <button class="category-btn" onclick="filterProducts('other', this)">
+          ✨ Khác
+        </button>
+      </div>
+
+      <!-- PRODUCT LIST -->
+
+      <div class="products">
+        <!-- =========================
+             A01 - US UK
+        ========================== -->
+
+        <div
+          class="product-card us-uk"
+          onclick="
+            openProduct(
+              './IMAGE/1ST_20261001/AVAILABLE/US-UK/a01.jpg',
+              'A01',
+              '🎀 Sao biển',
+              'Size M',
+              'NT$ 199',
+            )
+          "
+        >
+          <img src="./IMAGE/1ST_20261001/AVAILABLE/US-UK/a01.jpg" alt="A01" />
+
+          <div class="product-info">
+            <h3>A01</h3>
+
+            <p class="style">🎀 Sao biển</p>
+
+            <p class="price">NT$ 199</p>
+
+            <p class="size">📏 Size M</p>
+          </div>
+        </div>
+
+        <!-- =========================
+             A02 - Y2K
+        ========================== -->
+
+        <div
+          class="product-card y2k"
+          onclick="
+            openProduct(
+              './IMAGE/1ST_20261001/AVAILABLE/US-UK/a02.jpg',
+              'A02',
+              '🌸 Phong cách Hàn Quốc',
+              'Size S / M / L',
+              'NT$ 229',
+            )
+          "
+        >
+          <img src="./IMAGE/1ST_20261001/AVAILABLE/US-UK/a02.jpg" alt="A02" />
+
+          <div class="product-info">
+            <h3>A02</h3>
+
+            <p class="style">🌸 Phong cách Hàn Quốc</p>
+
+            <p class="price">NT$ 229</p>
+
+            <p class="size">📏 Size S / M / L</p>
+          </div>
+        </div>
+
+        <!-- =========================
+             A03 - MẮT MÈO
+        ========================== -->
+
+        <div
+          class="product-card cat-eye"
+          onclick="
+            openProduct(
+              './IMAGE/1ST_20261001/AVAILABLE/US-UK/a02.jpg',
+              'A03',
+              '🌸 Phong cách Hàn Quốc',
+              'Size S / M / L',
+              'NT$ 229',
+            )
+          "
+        >
+          <img src="./IMAGE/1ST_20261001/AVAILABLE/US-UK/a02.jpg" alt="A03" />
+
+          <div class="product-info">
+            <h3>A03</h3>
+
+            <p class="style">🌸 Phong cách Hàn Quốc</p>
+
+            <p class="price">NT$ 229</p>
+
+            <p class="size">📏 Size S / M / L</p>
+          </div>
+        </div>
+
+        <!-- =========================
+             A04 - KHÁC
+        ========================== -->
+
+        <div
+          class="product-card other"
+          onclick="
+            openProduct(
+              './IMAGE/1ST_20261001/AVAILABLE/US-UK/a02.jpg',
+              'A04',
+              '🌸 Phong cách Hàn Quốc',
+              'Size S / M / L',
+              'NT$ 229',
+            )
+          "
+        >
+          <img src="./IMAGE/1ST_20261001/AVAILABLE/US-UK/a02.jpg" alt="A04" />
+
+          <div class="product-info">
+            <h3>A04</h3>
+
+            <p class="style">🌸 Phong cách Hàn Quốc</p>
+
+            <p class="price">NT$ 229</p>
+
+            <p class="size">📏 Size S / M / L</p>
+          </div>
+        </div>
+
+        <!-- =========================
+             B01 - US UK
+        ========================== -->
+
+        <div
+          class="product-card us-uk"
+          onclick="
+            openProduct(
+              './IMAGE/1ST_20261001/AVAILABLE/US-UK/a02.jpg',
+              'B01',
+              '🌸 Phong cách Hàn Quốc',
+              'Size S / M / L',
+              'NT$ 229',
+            )
+          "
+        >
+          <img src="./IMAGE/1ST_20261001/AVAILABLE/US-UK/a02.jpg" alt="B01" />
+
+          <div class="product-info">
+            <h3>B01</h3>
+
+            <p class="style">🌸 Phong cách Hàn Quốc</p>
+
+            <p class="price">NT$ 229</p>
+
+            <p class="size">📏 Size S / M / L</p>
+          </div>
+        </div>
+
+        <!-- =========================
+             B02 - Y2K
+        ========================== -->
+
+        <div
+          class="product-card y2k"
+          onclick="
+            openProduct(
+              './IMAGE/1ST_20261001/AVAILABLE/US-UK/a02.jpg',
+              'B02',
+              '🌸 Phong cách Hàn Quốc',
+              'Size S / M / L',
+              'NT$ 229',
+            )
+          "
+        >
+          <img src="./IMAGE/1ST_20261001/AVAILABLE/US-UK/a02.jpg" alt="B02" />
+
+          <div class="product-info">
+            <h3>B02</h3>
+
+            <p class="style">🌸 Phong cách Hàn Quốc</p>
+
+            <p class="price">NT$ 229</p>
+
+            <p class="size">📏 Size S / M / L</p>
+          </div>
+        </div>
+
+        <!-- =========================
+             B03 - MẮT MÈO
+        ========================== -->
+
+        <div
+          class="product-card cat-eye"
+          onclick="
+            openProduct(
+              './IMAGE/1ST_20261001/AVAILABLE/US-UK/a02.jpg',
+              'B03',
+              '🌸 Phong cách Hàn Quốc',
+              'Size S / M / L',
+              'NT$ 229',
+            )
+          "
+        >
+          <img src="./IMAGE/1ST_20261001/AVAILABLE/US-UK/a02.jpg" alt="B03" />
+
+          <div class="product-info">
+            <h3>B03</h3>
+
+            <p class="style">🌸 Phong cách Hàn Quốc</p>
+
+            <p class="price">NT$ 229</p>
+
+            <p class="size">📏 Size S / M / L</p>
+          </div>
+        </div>
+
+        <!--
+          =========================
+          THÊM SẢN PHẨM Ở ĐÂY
+          =========================
+
+          Ví dụ sản phẩm M01 thuộc Mắt mèo:
+
+          <div
+            class="product-card cat-eye"
+            onclick="
+              openProduct(
+                './IMAGE/1ST_20261001/AVAILABLE/猫眼/m01.jpg',
+                'M01',
+                '✨ Mắt mèo',
+                'Size S / M / L',
+                'NT$ 249'
+              )
+            "
+          >
+            <img
+              src="./IMAGE/1ST_20261001/AVAILABLE/猫眼/m01.jpg"
+              alt="M01"
+            />
+
+            <div class="product-info">
+              <h3>M01</h3>
+
+              <p class="style">✨ Mắt mèo</p>
+
+              <p class="price">NT$ 249</p>
+
+              <p class="size">📏 Size S / M / L</p>
+            </div>
+          </div>
+
+        -->
+      </div>
+    </main>
+
+    <!-- =========================
+         POPUP PRODUCT DETAIL
+    ========================== -->
+
+    <div class="modal" id="modal">
+      <div class="detail-box">
+        <span class="close" onclick="closeProduct()"> × </span>
+
+        <!-- ẢNH LỚN BÊN TRÁI -->
+
+        <div class="image-area">
+          <img id="detailImage" class="detail-image" src="" alt="Nailbox" />
+        </div>
+
+        <!-- THÔNG TIN BÊN PHẢI -->
+
+        <div class="detail-info">
+          <h2 id="detailName"></h2>
+
+          <p id="detailStyle" class="detail-style"></p>
+
+          <p id="detailPrice" class="detail-price"></p>
+
+          <p id="detailSize" class="detail-size"></p>
+
+          <p class="stock">🟢 Mẫu có sẵn tại shop - 現貨</p>
+
+          <p class="description">
+            💅 Nailbox handmade<br />
+
+            💕 Free ship từ đơn 500元 - 滿 500元 - 免運<br />
+
+            📦 7-ELEVEN 全台寄送<br />
+          </p>
+
+          <button class="order-button" onclick="orderProduct()">
+            💕 Đặt mẫu này - 訂購這款
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- =========================
+         JAVASCRIPT
+    ========================== -->
+
+    <script>
+      /* =========================
+         OPEN PRODUCT
+      ========================== */
+
+      function openProduct(image, name, style, size, price) {
+        document.getElementById("detailImage").src = image;
+
+        document.getElementById("detailImage").alt = name;
+
+        document.getElementById("detailName").textContent = name;
+
+        document.getElementById("detailStyle").textContent = style;
+
+        document.getElementById("detailPrice").textContent = price;
+
+        document.getElementById("detailSize").textContent = size
+          ? "📏 " + size
+          : "";
+
+        document.getElementById("modal").style.display = "flex";
+      }
+
+      /* =========================
+         CLOSE PRODUCT
+      ========================== */
+
+      function closeProduct() {
+        document.getElementById("modal").style.display = "none";
+      }
+
+      /* =========================
+         CLICK OUTSIDE POPUP
+      ========================== */
+
+      document.getElementById("modal").onclick = function (event) {
+        if (event.target === this) {
+          closeProduct();
+        }
+      };
+
+      /* =========================
+         FILTER PRODUCTS
+      ========================== */
+
+      function filterProducts(category, button) {
+        const products = document.querySelectorAll(".product-card");
+
+        const buttons = document.querySelectorAll(".category-btn");
+
+        /* Xóa active */
+
+        buttons.forEach((btn) => {
+          btn.classList.remove("active");
+        });
+
+        /* Thêm active */
+
+        button.classList.add("active");
+
+        /* Lọc sản phẩm */
+
+        products.forEach((product) => {
+          if (category === "all" || product.classList.contains(category)) {
+            product.style.display = "";
+          } else {
+            product.style.display = "none";
+          }
+        });
+      }
+
+      /* =========================
+         ORDER PRODUCT
+      ========================== */
+
+      function orderProduct() {
+        alert(
+          "Cảm ơn bạn 💕 Vui lòng gửi ảnh + mã sản phẩm cho shop để đặt hàng!\n\n" +
+            "謝謝你 💕 請將款式照片 + 商品編號傳給我們，即可訂購！",
+        );
+      }
+    </script>
+  </body>
+</html>

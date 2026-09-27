@@ -2,11 +2,13 @@
 <html lang="vi">
   <head>
     <meta charset="UTF-8" />
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>💅 NailBox Lena in Taiwan</title>
+    <title>🐱 NailBox Lena - Mắt mèo</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
+
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
     <link
@@ -18,33 +20,34 @@
   </head>
 
   <body>
-    <!-- =========================
-         HEADER
-    ========================== -->
+    <!-- HEADER -->
 
     <header>
       <h1>💅 NailBox Lena in Taiwan</h1>
 
       <p>
         Những mẫu nailbox handmade hot trend có sẵn tại Lena<br />
+
         Free ship từ đơn 500元<br />
+
         Ship 7-ELEVEN toàn quốc<br /><br />
 
         Lena 現有流行穿戴甲款式<br />
+
         台灣手工穿戴甲<br />
+
         滿500元 - 免運<br />
+
         7-ELEVEN 全台寄送
       </p>
     </header>
 
-    <!-- =========================
-         CATEGORY BUTTONS
-    ========================== -->
+    <!-- CATEGORY BUTTONS -->
 
     <nav class="category-buttons">
-      <a href="index.html" class="category-btn active"> ✨ Tất cả </a>
+      <a href="index.html" class="category-btn"> ✨ Tất cả </a>
 
-      <a href="cat-eye.html" class="category-btn"> 🐱 Mắt mèo </a>
+      <a href="cat-eye.html" class="category-btn active"> 🐱 Mắt mèo </a>
 
       <a href="y2k.html" class="category-btn"> 💿 Y2K </a>
 
@@ -53,34 +56,79 @@
       <a href="other.html" class="category-btn"> ✨ Khác </a>
     </nav>
 
-    <!-- =========================
-         ALL PRODUCTS
-         JavaScript tự lấy từ 4 file
-    ========================== -->
-
     <!-- PRODUCTS -->
 
     <main class="container">
-      <div class="products" id="allProducts">
-        <!-- JavaScript sẽ tự lấy sản phẩm từ 4 file -->
+      <div class="products">
+        <!-- =========================
+           MẪU MẮT MÈO 01
+      ========================== -->
+
+        <div
+          class="product-card"
+          onclick="
+            openProduct(
+              './IMAGE/1ST_20261001/AVAILABLE/CAT-EYE/m01.jpg',
+              'M01',
+              '🐱 Mắt mèo',
+              'Size S / M / L',
+              'NT$ 229',
+            )
+          "
+        >
+          <img src="./IMAGE/1ST_20261001/AVAILABLE/CAT-EYE/m01.jpg" alt="M01" />
+
+          <div class="product-info">
+            <h3>M01</h3>
+
+            <p class="style">🐱 Mắt mèo</p>
+
+            <p class="price">NT$ 229</p>
+
+            <p class="size">📏 Size S / M / L</p>
+          </div>
+        </div>
+
+        <!-- =========================
+           THÊM MẪU MẮT MÈO Ở ĐÂY
+      ========================== -->
+
+        <div
+          class="product-card"
+          onclick="
+            openProduct(
+              './IMAGE/1ST_20261001/AVAILABLE/CAT-EYE/m02.jpg',
+              'M02',
+              '🐱 Mắt mèo',
+              'Size S / M / L',
+              'NT$ 249',
+            )
+          "
+        >
+          <img src="./IMAGE/1ST_20261001/AVAILABLE/CAT-EYE/m02.jpg" alt="M02" />
+
+          <div class="product-info">
+            <h3>M02</h3>
+
+            <p class="style">🐱 Mắt mèo</p>
+
+            <p class="price">NT$ 249</p>
+
+            <p class="size">📏 Size S / M / L</p>
+          </div>
+        </div>
       </div>
     </main>
 
-    <!-- =========================
-         POPUP
-    ========================== -->
+    <!-- POPUP -->
 
     <div class="modal" id="modal">
       <div class="detail-box">
         <span class="close" onclick="closeProduct()"> × </span>
 
-        <!-- ẢNH LỚN -->
-
         <div class="image-area">
           <img id="detailImage" class="detail-image" src="" alt="Nailbox" />
         </div>
-
-        <!-- THÔNG TIN -->
 
         <div class="detail-info">
           <h2 id="detailName"></h2>
@@ -95,7 +143,9 @@
 
           <p class="description">
             💅 Nailbox handmade<br />
+
             💕 Free ship từ đơn 500元 - 滿 500元 - 免運<br />
+
             📦 7-ELEVEN 全台寄送<br />
           </p>
 

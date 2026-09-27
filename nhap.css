@@ -6,9 +6,7 @@
 
 body {
   font-family: "Montserrat", sans-serif;
-
   background: #fff8fa;
-
   color: #333;
 }
 
@@ -18,28 +16,32 @@ body {
 
 header {
   text-align: center;
-
   padding: 50px 20px 35px;
-
   background: #fff;
 }
 
 header h1 {
   font-family: "Playfair Display", serif;
-
   font-size: 38px;
-
   margin-bottom: 20px;
-
   color: #333;
 }
 
 header p {
   line-height: 1.8;
-
   font-size: 14px;
-
   color: #666;
+}
+
+/* ========================================
+   MAIN CONTAINER
+======================================== */
+
+.container {
+  width: 100%;
+  max-width: 1400px;
+  margin: auto;
+  padding: 20px 30px 60px;
 }
 
 /* ========================================
@@ -48,21 +50,17 @@ header p {
 
 .category-buttons {
   display: flex;
-
   justify-content: center;
-
   align-items: center;
 
   gap: 12px;
 
-  flex-wrap: wrap;
+  margin: 10px 0 35px;
 
-  padding: 25px 20px 10px;
+  flex-wrap: wrap;
 }
 
 .category-btn {
-  text-decoration: none;
-
   border: 1px solid #e5d6db;
 
   background: white;
@@ -81,7 +79,9 @@ header p {
 
   cursor: pointer;
 
-  transition: 0.3s ease;
+  transition:
+    0.3s ease,
+    transform 0.3s ease;
 }
 
 .category-btn:hover {
@@ -99,21 +99,7 @@ header p {
 }
 
 /* ========================================
-   CONTAINER
-======================================== */
-
-.container {
-  width: 100%;
-
-  max-width: 1400px;
-
-  margin: auto;
-
-  padding: 20px 30px 60px;
-}
-
-/* ========================================
-   PRODUCTS
+   PRODUCT GRID
 ======================================== */
 
 .products {
@@ -165,7 +151,7 @@ header p {
 }
 
 /* ========================================
-   PRODUCT INFO
+   PRODUCT INFORMATION
 ======================================== */
 
 .product-info {
@@ -178,6 +164,8 @@ header p {
   font-size: 21px;
 
   margin-bottom: 7px;
+
+  color: #333;
 }
 
 .product-info .style {
@@ -216,11 +204,9 @@ header p {
   z-index: 9999;
 
   left: 0;
-
   top: 0;
 
   width: 100%;
-
   height: 100%;
 
   background: rgba(0, 0, 0, 0.65);
@@ -257,7 +243,7 @@ header p {
 }
 
 /* ========================================
-   CLOSE
+   CLOSE BUTTON
 ======================================== */
 
 .close {
@@ -271,9 +257,13 @@ header p {
 
   font-size: 35px;
 
+  line-height: 1;
+
   color: #555;
 
   cursor: pointer;
+
+  transition: 0.2s;
 }
 
 .close:hover {
@@ -311,7 +301,7 @@ header p {
 }
 
 /* ========================================
-   DETAIL INFO
+   DETAIL INFORMATION
 ======================================== */
 
 .detail-info {
@@ -330,6 +320,8 @@ header p {
   font-size: 34px;
 
   margin-bottom: 15px;
+
+  color: #333;
 }
 
 .detail-style {
@@ -439,6 +431,8 @@ header p {
 
   .category-buttons {
     gap: 8px;
+
+    margin-bottom: 25px;
   }
 
   .category-btn {
@@ -469,7 +463,7 @@ header p {
     font-size: 15px;
   }
 
-  /* POPUP */
+  /* POPUP MOBILE */
 
   .modal {
     padding: 15px;
